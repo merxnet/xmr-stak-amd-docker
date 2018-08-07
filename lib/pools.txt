@@ -1,0 +1,13 @@
+"pool_list": [
+  {
+    "pool_address": "us.moriaxmr.com:9000",
+    "wallet_address": "",
+    "rig_id": "",
+    "pool_password": "",
+    "use_nicehash": false,
+    "use_tls": true,
+    "tls_fingerprint": "",
+    "pool_weight": 1
+  }
+],
+"currency": "monero7"

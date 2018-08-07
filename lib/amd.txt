@@ -1,0 +1,12 @@
+"gpu_threads_conf": [
+  {
+    "index": 0,
+    "intensity": 256,
+    "worksize": 8,
+    "affine_to_cpu": 3,
+    "strided_index": true,
+    "mem_chunk": 2,
+    "comp_mode": true
+  }
+],
+"platform_index": 0
