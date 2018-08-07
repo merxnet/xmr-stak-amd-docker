@@ -6,6 +6,8 @@ Requires=docker.service
 [Service]
 Restart=always
 ExecStart=/usr/bin/docker run --rm --name %n \
+            --device /dev/dri \
+            #--env-file /etc/xmr-stak/amd.env \
             -v /etc/xmr-stak:/etc/xmr-stak:ro \
             merxnet/xmr-stak-amd \
             -c /etc/xmr-stak/config.txt \
