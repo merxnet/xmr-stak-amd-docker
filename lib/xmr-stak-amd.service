@@ -1,0 +1,17 @@
+[Unit]
+Description=XMR-Stak (AMD GPU) Monero miner
+After=docker.service
+Requires=docker.service
+
+[Service]
+Restart=always
+ExecStart=/usr/bin/docker run --rm --name %n \
+            -v /etc/xmr-stak:/etc/xmr-stak:ro \
+            merxnet/xmr-stak-amd \
+            -c /etc/xmr-stak/config.txt \
+            -C /etc/xmr-stak/pools.txt \
+            --amd /etc/xmr-stak/amd.txt
+ExecStop=/usr/bin/docker stop %n
+
+[Install]
+WantedBy=multi-user.target
