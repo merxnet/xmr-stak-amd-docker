@@ -13,7 +13,7 @@ docker pull merxnet/xmr-stak-amd
 ```
 To get started, install the AMD drivers (see the [Host Configuration](#host-configuration) section below). Once complete, all you need is a [wallet](https://getmonero.org/resources/user-guides/create_wallet.html) and a [mining pool](https://monero.org/services/mining-pools/) of your choice, such as [MoriaXMR](https://moriaxmr.com/). You may also be prompted for a password, which in this case is simply an identifer for the host. This information can be provided on the command line at run time:
 ```
-docker run --device /dev/dri merxnet/xmr-stak-amd -o ${POOL} -u ${WALLET} -p ${PASSWD} --currency monero7
+docker run --device /dev/dri merxnet/xmr-stak-amd -o ${POOL} -u ${WALLET} -p ${PASSWD} --currency monero
 ```
 To get the most out of mining, be sure to check out the sections below as well as the documentation at the [source code's GitHub page](https://github.com/fireice-uk/xmr-stak/blob/master/doc/usage.md).
 
@@ -24,7 +24,7 @@ docker run -d --name xmr-stak-amd merxnet/xmr-stak-amd \
   -O us.moriaxmr.com:9000 \
   -u ${WALLET} \
   -p ${PASSWD} \
-  --currency monero7
+  --currency monero
 ```
 Most often it is easiest to provide configuration files. To do this, it is recommended that all configuration files be stored in the same directory on the host and then passed to the container at runtime:
 ```
