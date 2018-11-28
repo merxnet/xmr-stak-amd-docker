@@ -3,9 +3,10 @@
     "index": 0,
     "intensity": 256,
     "worksize": 8,
-    "affine_to_cpu": 3,
-    "strided_index": true,
+    "affine_to_cpu": false,
+    "strided_index": 2,
     "mem_chunk": 2,
+    "unroll": 8,
     "comp_mode": true
   }
 ],
